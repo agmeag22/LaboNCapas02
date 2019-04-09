@@ -38,10 +38,10 @@ public class AnotacionServlet extends HttpServlet {
 			out.println("<html>");
 			out.println("<body>");
 			if(user.equals(regxuser) && pass.equals(regxpass)) {
-				out.println("<h2><strong>Credenciales Validas has iniciado Sesion.</strong></h2>");
+				out.println("<h2><strong>Credenciales v&aacutelidas has iniciado Sesi&oacuten.</strong></h2>");
 				
 			}else {
-				out.println("<h2><strong>Credenciales Invalidas no posees acceso.</strong></h2>");
+				out.println("<h2><strong>Credenciales inv&aacutelidas no posees acceso.</strong></h2>");
 			}
 			out.println("</body>");
 			out.println("</html>");
