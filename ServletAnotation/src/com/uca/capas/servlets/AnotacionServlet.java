@@ -29,7 +29,24 @@ public class AnotacionServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+			String regxuser="agmeag";
+			String regxpass="159753";
+			if(request.getParameter("name")!=null && request.getParameter("name")!=null) {
+			String user = request.getParameter("name").toString();
+			String pass=request.getParameter("password").toString();
+			PrintWriter out = response.getWriter();
+			out.println("<html>");
+			out.println("<body>");
+			if(user.equals(regxuser) && pass.equals(regxpass)) {
+				out.println("<h2><strong>GENIAL LOGGEASTE</strong></h2>");
+				
+			}else {
+				out.println("<h2><strong>GENIAL LOGGEASTE</strong></h2>");
+			}
+			out.println("</body>");
+			out.println("</html>");
+			}
 	}
 
 	/**
@@ -37,17 +54,7 @@ public class AnotacionServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
-		String user=(request.getParameter("name")).toString();
-		String pass=(request.getParameter("password")).toString();
-		PrintWriter out = response.getWriter();
-		if(user.contentEquals("miguel")) {
-			out.println("<html>");
-			out.println("<body>");
-			out.println("GENIAL LOGGEASTE");
-			out.println("</body>");
-			out.println("</html>");
-		}
+		doGet(request, response);
 		
 	}
 

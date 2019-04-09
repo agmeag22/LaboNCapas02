@@ -3,5 +3,8 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-	
+	<servlet>
+	 		<servlet-name>AnotacionServlet</servlet-name> 
+	 		<servlet-class>com.uca.capas.servlets.AnotacionServlet</servlet-class> 
+		</servlet>
 </web-app>

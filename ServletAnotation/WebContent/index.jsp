@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
+<title>Insert title here</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/AnotacionServlet" method="post">
-		
-		<label>Ingrese usuario: </label><input name="user" type="text">
+	
+	<form action="${pageContext.request.contextPath}/AnotacionServlet" method="post">
+		<label>Ingrese Usuario: </label><input name="user" type="text">
 		<label>Ingrese Clave: </label><input name="password" type="password">
-		<input type="submit" value="Ingresar">
-</form>
+		<input type = "submit" value = "Login">
+	</form>
 </body>
 </html>
