@@ -32,9 +32,10 @@ public class AnotacionServlet extends HttpServlet {
 		
 			String regxuser="agmeag";
 			String regxpass="159753";
-			String user = request.getParameter("user");
-			String pass=request.getParameter("password");
 			PrintWriter out = response.getWriter();
+			if(request.getParameter("user")!=null && request.getParameter("password")!=null ) {
+			String user = request.getParameter("user").toString();
+			String pass=request.getParameter("password").toString();
 			out.println("<html>");
 			out.println("<body>");
 			if(user.equals(regxuser) && pass.equals(regxpass)) {
@@ -45,7 +46,13 @@ public class AnotacionServlet extends HttpServlet {
 			}
 			out.println("</body>");
 			out.println("</html>");
-			
+			}else {
+				out.println("<html>");
+				out.println("<body>");
+				out.println("<h2><strong>Ups! Algo anda mal...</strong></h2>");
+				out.println("</body>");
+				out.println("</html>");
+			}
 	}
 
 	/**
